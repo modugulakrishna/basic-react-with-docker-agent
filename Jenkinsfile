@@ -16,7 +16,7 @@ pipeline {
     stage('npm install'){
       agent {
           docker { 
-	     image 'node:latest'
+	     image 'node:alpine'
 	     customWorkspace "$JENKINS_HOME/workspace/$BUILD_TAG"
 	  }
       }
